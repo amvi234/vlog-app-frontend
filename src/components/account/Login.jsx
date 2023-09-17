@@ -13,7 +13,8 @@ const Component = styled(Box)`
 `;
 
 const Image = styled('img')({
-    width: 100,
+    width: 200,
+    height: 200,
     display: 'flex',
     margin: 'auto',
     padding: '50px 0 0'
@@ -32,7 +33,7 @@ const Wrapper = styled(Box)`
 
 const LoginButton = styled(Button)`
     text-transform: none;
-    background: #FB641B;
+    background: #9400d3;
     color: #fff;
     height: 48px;
     border-radius: 2px;
@@ -80,7 +81,7 @@ const Login = ({ isUserAuthenticated }) => {
     const navigate = useNavigate();
     const { setAccount } = useContext(DataContext);
 
-    const imageURL = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.techsmith.com%2Fblog%2Fvideo-file-formats%2F&psig=AOvVaw1MS_IrDYuWuLHzDubWWcp8&ust=1694966400002000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCPDAxIfAr4EDFQAAAAAdAAAAABAF';
+    const imageURL = 'https://img.freepik.com/free-vector/vlog-neon-sign-bright-text-with-letter-o-shape-play-button_1262-11931.jpg?w=2000';
 
     useEffect(() => {
         showError(false);
@@ -143,9 +144,9 @@ const Login = ({ isUserAuthenticated }) => {
                             <SignupButton onClick={() => toggleSignup()} style={{ marginBottom: 50 }}>Create an account</SignupButton>
                         </Wrapper> :
                         <Wrapper>
-                            <TextField variant="standard" onChange={(e) => onInputChange(e)} name='name' label='Enter Name' />
-                            <TextField variant="standard" onChange={(e) => onInputChange(e)} name='username' label='Enter Username' />
-                            <TextField variant="standard" onChange={(e) => onInputChange(e)} name='password' label='Enter Password' />
+                            <TextField  onChange={(e) => onInputChange(e)} name='name' label='Enter Name' />
+                            <TextField onChange={(e) => onInputChange(e)} name='username' label='Enter Username' />
+                            <TextField onChange={(e) => onInputChange(e)} name='password' label='Enter Password' />
 
                             <SignupButton onClick={() => signupUser()} >Signup</SignupButton>
                             <Text style={{ textAlign: 'center' }}>OR</Text>
